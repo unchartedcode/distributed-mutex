@@ -10,13 +10,16 @@ Gem::Specification.new do |spec|
   spec.email         = ["nathan@nathanpalmer.com"]
 
   spec.summary       = %q{Distributed Mutex to allow mutual-exclusion via acquiring locks between multiple processes or machines}
+  spec.description   = %q{
+    This gem allows you to lock specific chunks of code based on a shared key. It's a Mutex, but locks beyond a single machine by utilizing Redis's SETNX.
+  }
   spec.homepage      = "https://github.com/unchartedcode/distributed-mutex"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = "https://rubygems.org"
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
@@ -28,10 +31,10 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "mock_redis"
-  spec.add_development_dependency "byebug"
-  spec.add_development_dependency "coveralls"
+  spec.add_development_dependency "rspec", '~> 0'
+  spec.add_development_dependency "mock_redis", '~> 0'
+  spec.add_development_dependency "byebug", '~> 0'
+  spec.add_development_dependency "coveralls", '~> 0'
 
-  spec.add_dependency "redis"
+  spec.add_dependency "redis", '~> 0'
 end
