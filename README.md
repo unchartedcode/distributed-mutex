@@ -1,7 +1,7 @@
 # DistributedMutex
 
 [![Build Status](https://travis-ci.org/unchartedcode/distributed-mutex.svg?branch=master)](https://travis-ci.org/unchartedcode/distributed-mutex)
-[![Coverage Status](https://coveralls.io/repos/unchartedcode/distributed-mutex/badge.svg?branch=master&service=github)](https://coveralls.io/github/unchartedcode/distributed-mutex?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/unchartedcode/distributed-mutex/badge.svg?branch=master)](https://coveralls.io/github/unchartedcode/distributed-mutex?branch=master)
 
 This gem allows you to lock specific chunks of code based on a shared key. It's a Mutex, but locks beyond a single machine by utilizing [Redis](http://redis.io/)'s [SETNX](http://redis.io/commands/setnx). This code was originally extracted from Discourse into Uncharted Scheduler and later extracted from there into it's own repository.
 
